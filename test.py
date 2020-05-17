@@ -24,3 +24,5 @@ for i in range(0,b,2):
     df =  df.append(tmp, ignore_index=True)
 
     b = len(text.index)
+
+print(df)
