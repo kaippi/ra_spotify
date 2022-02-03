@@ -72,7 +72,7 @@ code = cur_url.query[5:]
 def get_token_user(code, redirect_uri):
     url = "https://accounts.spotify.com/api/token"
     payload = {'grant_type':'authorization_code', 'code':code, 'redirect_uri':redirect_uri}
-    headers = {'Authorization':'Basic OWMyYzU5OWNhY2YxNGVlMjlhYjdlOWUyMmFlZWE3ZTg6OWFkZWE5OWM1OTcyNDg0MDg0MTY2MTk0MzY1YWU2MDI='}
+    headers = {'Authorization':'Basic "認証コード"'}
     response=requests.post(url, data=payload, headers=headers) 
     print(response.url)
     print(response.headers)
